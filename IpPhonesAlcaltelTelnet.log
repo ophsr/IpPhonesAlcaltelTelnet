@@ -1,8 +1,0 @@
-2021-09-02 10:07:55,738 - root - INFO - The amount IP address: 5
-2021-09-02 10:07:55,738 - root - INFO - Location is C:\Temp\MD5.xls
-2021-09-02 10:07:55,932 - root - WARNING - Not valid IP number: IP
-2021-09-02 10:07:56,117 - root - WARNING - Not valid IP number: 0.0
-2021-09-02 10:08:02,303 - root - ERROR - timed out in HOST: 172.16.236.129
-2021-09-02 10:08:03,559 - root - ERROR - Connection Refused Error in HOST: 172.18.146.101
-2021-09-02 10:08:03,760 - root - INFO - Telnet session start in 172.18.47.6
-2021-09-02 10:08:03,838 - root - INFO - Command response in ip: 172.18.47.6 - TLS:ENABLED
