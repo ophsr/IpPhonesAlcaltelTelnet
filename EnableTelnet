@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Proposito do Script: Enable telnet from extension number from a list!
+# Criado por Pedro Rodrigues
+#                     ^ ^
+#                   ( O O )
+#   +============oOO==(_)==OOo==============+
+#   | Pedro Rodrigues                       |
+#   | phsr2001@gmail.com                    |
+#   | pedro.rodrigues@3corp.com.br          |
+#   +=======================================+
+
+FILES="/DHS3bin/mtcl/scripts/list_extension"
+
+CommandScript(){
+	for ip in $FILES; do
+		/usr2/oneshot/mtcl/tool ippstat telnet d $ip t 1440 >> resultNoFormat.txt
+	done
+	awk 'NF' resultNoFormat.txt > result.txt
+	rm resultNoFormat.txt
+}
+CommandScript
