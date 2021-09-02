@@ -10,13 +10,12 @@
 #   | pedro.rodrigues@3corp.com.br          |
 #   +=======================================+
 
-FILES="/DHS3bin/mtcl/scripts/list_extension"
-
 CommandScript(){
-	for ip in $FILES; do
-		/usr2/oneshot/mtcl/tool ippstat telnet d $ip t 1440 >> resultNoFormat.txt
-	done
-	awk 'NF' resultNoFormat.txt > result.txt
-	rm resultNoFormat.txt
-}
+    while read extension; do
+		/usr2/oneshot/mtcl/tool ippstat telnet d $extension t 1440 | paste -sd ' - ' > command
+		archive=$(cat /DHS3bin/mtcl/scripts/command) 
+		echo "$extension - $archive" >> result.log
+	done < list_extension
+	rm command
+}		
 CommandScript
